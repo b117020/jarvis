@@ -87,9 +87,13 @@ if __name__ == "__main__":
                 speak(f"the time is {strTime}")
 
             elif 'stop' in query or 'bye' in query:
-                speak("Bye sir, have a good time!!")
-                break;
-
+                speak("are you sure?")
+                query1 = takeCommand().lower()
+                if 'yes' in query1:
+                    speak("Bye sir, have a good time!!")
+                    break;
+                else:
+                    continue
 
             else:
                 query = query
